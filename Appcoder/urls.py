@@ -1,5 +1,6 @@
 from django.urls import path
-from Appcoder.views import inicio, cursos, entregables, estudiantes, profesores, setEstudiantes,getEstudiantes,buscarEstudiante,setCursos,getCursos,buscarCursos,setProfesores,getProfesores,buscarProfesores
+from django.contrib.auth.views import LogoutView
+from Appcoder.views import inicio, cursos, entregables, estudiantes, profesores, setEstudiantes,getEstudiantes,buscarEstudiante,setCursos,getCursos,buscarCursos,setProfesores,getProfesores,buscarProfesores,eliminarEstudiante,editarEstudiante,loginWeb,registro,perfilview,editarPerfil,changePassword,editAvatar
 urlpatterns = [
     
     path('inicio/', inicio, name="Inicio"),
@@ -16,6 +17,15 @@ urlpatterns = [
     path('setProfesores/', setProfesores,name="setProfesores"),
     path('getProfesores/', getProfesores,name="getProfesores"),
     path('buscarProfesores/', buscarProfesores,name="buscarProfesores"),
+    path('eliminarEstudiante/<nombre_estudiante>', eliminarEstudiante,name="eliminarEstudiante"),
+    path('editarEstudiante/<nombre_estudiante>', editarEstudiante,name="editarEstudiante"),
+    path('login/',loginWeb, name="login"),
+    path('registro/',registro, name="registro"),
+    path('Logout/',LogoutView.as_view(template_name = "Appcoder/login.html"), name="logout"),
+    path('perfil/',perfilview, name="perfil"),
+    path('Perfil/editarPerfil/',editarPerfil, name="editarPerfil"),
+    path('Perfil/changePassword/',changePassword, name="changePassword"),
+    path('Perfil/Avatar/',editAvatar, name="editAvatar"),
 
     
     

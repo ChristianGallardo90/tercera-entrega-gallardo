@@ -12,19 +12,24 @@
     </div>
   </div>
 
-  <div class="tab" id="forGetEstudiante">
-    <div>
+   <div class="tab" id="forGetEstudiante">
+     <div>
       <a href="{% url 'getEstudiantes' %}" class="btn">Buscar estudiantes</a>
-    </div>
-  </div>
-</div>
+     </div>
+   </div>
+ </div>
 
-<div class="contenido">
+ 
+
+ <div class="contenido">
   {% block setEstudiantes %}
   {% endblock %}
 
   {% block getEstudiantes %}
   {% endblock %}
+
+  
+
 </div>
 
 {% endblock %}

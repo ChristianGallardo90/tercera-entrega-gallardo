@@ -36,4 +36,4 @@ En la carpeta `static` estan todos los archivos de css, javascript.
 
 3. Utiliza las funciones de las secciones para agregar nuevos estudiantes, cursos y profesores.
 
-4. Utiliza las funciones de búsqueda para encontrar estudiantes, cursos o profesores.
+4. Utiliza las funciones de búsqueda para encontrar estudiantes, cursos o profesores
